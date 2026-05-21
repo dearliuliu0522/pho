@@ -674,9 +674,10 @@ class GalleryBodyState extends State<GalleryBody>
         ));
       }
     }
-    return SliverList.list(
-      children: children,
-    );
+    return SliverList(
+        delegate: SliverChildListDelegate(
+      children,
+    ));
   }
 
   @override

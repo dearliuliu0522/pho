@@ -30,7 +30,7 @@ class SettingBody extends StatelessWidget {
                             builder: (context) => const ChooseAlbumRoute()),
                       );
                     },
-                    child: const Row(
+                    child: Row(
                       children: [
                         Icon(
                           Icons.folder_outlined,
@@ -55,7 +55,7 @@ class SettingBody extends StatelessWidget {
                             builder: (context) => const SettingStorageRoute(),
                           ));
                     },
-                    child: const Row(
+                    child: Row(
                       children: [
                         Icon(
                           Icons.cloud_outlined,

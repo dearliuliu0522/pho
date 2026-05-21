@@ -193,8 +193,9 @@ class AssetModel extends ChangeNotifier {
     if (settingModel.localFolder == "") {
       int max = 0;
       for (var path in paths) {
-        if (path.assetCount > max) {
-          max = path.assetCount;
+        final count = await path.assetCountAsync;
+        if (count > max) {
+          max = await path.assetCountAsync;
           settingModel.localFolder = path.name;
         }
       }

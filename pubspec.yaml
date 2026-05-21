@@ -38,13 +38,10 @@ dependencies:
   toast: ^0.3.0
   grpc: ^3.1.0
   # photo_manager: ^2.6.0
-  photo_manager:
-    git:
-      url: git@github.com:fluttercandies/flutter_photo_manager.git
-      ref: main
+  photo_manager: ">=3.0.0 <3.8.0"
   photo_view:
     git:
-      url: git@github.com:bluefireteam/photo_view.git
+      url: https://github.com/bluefireteam/photo_view.git
       ref: main
   date_format: ^2.0.7
   image_picker: ^1.0.0
@@ -54,7 +51,7 @@ dependencies:
   event_bus: ^2.0.0
   exif: ^3.1.4
   adaptive_theme: ^3.2.0
-  dynamic_color: ^1.6.2
+  dynamic_color: 1.6.2
   synchronized: ^3.0.1
   rxdart: ^0.27.7
   image: ^4.0.17
@@ -62,7 +59,7 @@ dependencies:
   logger: ^1.3.0
   connectivity_plus: ^4.0.1
   flutter_launcher_icons: ^0.13.1
-  extended_image: ^8.0.2
+  extended_image: ^7.0.2
   flutter_localizations:
     sdk: flutter
   chewie: ^1.7.0

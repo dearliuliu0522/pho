@@ -40,7 +40,11 @@ class Global {
         final List<AssetPathEntity> paths = await PhotoManager.getAssetPathList(
             type: RequestType.common, hasAll: true);
         // ignore: deprecated_member_use
-        paths.sort((a, b) => b.assetCount.compareTo(a.assetCount));
+        final assetCounts = await Future.wait(
+          paths.map((p) => p.assetCountAsync),
+        );
+        final pathCountMap = Map.fromIterables(paths, assetCounts);
+        paths.sort((a, b) => pathCountMap[b]!.compareTo(pathCountMap[a]!));
         if (paths.isNotEmpty) {
           settingModel.setLocalFolder(paths[0].name);
         }
